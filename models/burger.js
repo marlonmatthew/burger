@@ -6,11 +6,13 @@ var burger = {
       cb(res);
     });
   },
+
   create(name, cb) {
     orm.create("burgers", ["burger_name", "devoured"], [name, false], cb);
   },
+
   update(id, cb) {
-    const condition = `id = ${req.params.id}`;
+    const condition = "id=" + id;
     orm.update(
       "burgers",
       {

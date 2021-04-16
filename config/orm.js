@@ -12,15 +12,8 @@ const printQuestionMarks = (num) => {
 
 const objToSql = (ob) => {
   const arr = [];
-
-  for (const key in ob) {
-    let value = ob[key];
-    if (Object.hasOwnProperty.call(ob, key)) {
-      if (typeof value === "string" && value.indexOf(" ") >= 0) {
-        value = `'${value}'`;
-      }
-      arr.push(`${key}=${value}`);
-    }
+  for (var key in ob) {
+    arr.push(key + "=" + ob[key]);
   }
   return arr.toString();
 };

@@ -15,12 +15,12 @@
         {{#unless this.devoured}}
 
         <div class="col text-center">
-            {{this.id}}.{{this.burger_name}}
+            <pre>{{this.id}}. {{this.burger_name}}</pre>
         </div>
 
         <div class="col text-center">
             <form class="devour">
-                <input class="burger" value={{this.id}} type="text" type="hidden"><br>
+                <input hidden class="burger" value={{this.id}} type="text" type="hidden"><br>
                 <button type="submit" class="btn btn-default">Devour Burger</button>
             </form>
         </div>
