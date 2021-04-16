@@ -24,9 +24,7 @@ router.post("/burgers/create", (req, res) => {
 });
 
 router.put("/burgers/:id", (req, res) => {
-  const burgerCondition = `id = ${req.params.id}`;
-
-  burger.update(burgerCondition, (result) => {
+  burger.update(condition, (result) => {
     console.log(result);
     if (result.changedRows === 0) {
       return res.status(404).end();
